@@ -5,6 +5,7 @@ export function afisareSolutie(matrice: number[][], m: number, n: number): strin
   );
   let solutie: number[] = [];
 
+  // parcurg fiecare coloana si pentru fiecare coloana parcurg fiecare linie pentru a afla daca exista o valoare optima
   for (let j = 0; j < n; j++) {
     let valoareColoana: number = 0;
     let limieOptima: number = 0;

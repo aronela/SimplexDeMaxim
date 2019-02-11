@@ -13,7 +13,7 @@ export function pivotare(matrice: number[][]): void {
   for (let i: number = 0; i < matrice.length; i++) {
     let valoareCurenta: number = matrice[i][pivotPosition.coloana];
 
-    // sa nu fie pivotul si valoare sa fie diferita de zero
+    // sa nu fie pivotul si valoarea sa fie diferita de zero
     if (i !== pivotPosition.linie && valoareCurenta !== 0) {
       let divizor: number = cmmdc(valoareCurenta, valoarePivot);
       let coeficientA: number = valoarePivot / divizor;

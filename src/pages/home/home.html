@@ -8,8 +8,8 @@
 
   <div *ngIf="solutiaAleasa" padding-top>
     <h3>
-      Ati ales {{ solutiaAleasa.numar }},
-      setul este acesta: {{ solutiaAleasa.solutie }}
+      Ati ales Setul {{ solutiaAleasa.numar }}, rezultatul este acesta:
+      <span style="white-space: nowrap">{{ solutiaAleasa.solutie }}</span>
     </h3>
     <br><br><br>
     <button ion-button color="primary" (click)="restart()">Restart</button>

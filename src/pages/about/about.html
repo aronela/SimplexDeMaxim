@@ -1,11 +1,55 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Simplex de Minim
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <div *ngIf="solutiaAleasa" padding-top>
+    <h3>
+      Ati ales Setul {{ solutiaAleasa.numar }}, rezultatul este acesta:
+      <span style="white-space: nowrap">{{ solutiaAleasa.solutie }}</span>
+    </h3>
+    <br><br><br>
+    <button ion-button color="primary" (click)="restart()">Restart</button>
+  </div>
+
+  <div *ngIf="!solutiaAleasa && solutii.length" padding-top>
+    <h4>Am gasit solutii, decideti setul:</h4>
+    <br>
+    <div *ngFor="let solutie of solutii">
+      <ion-item>
+        <ion-checkbox [(ngModel)]="solutie.selected" (ionChange)="updateSolutie()"></ion-checkbox>
+        <ion-label color="primary">
+          <h6> Setul {{ solutie.numar }}: {{ solutie.solutie }}</h6>
+        </ion-label>
+      </ion-item>
+    </div>
+  </div>
+
+  <div *ngIf="!solutiaAleasa && !solutii.length && seturiIntrare" padding-top>
+    <h4>Alegeti doua seturi de intrare:</h4>
+    <br>
+
+    <div *ngFor="let seturi of seturiIntrare">
+      <ion-item>
+        <ion-checkbox [(ngModel)]="seturi.selected" (ionChange)="updateSelection()"></ion-checkbox>
+        <ion-label color="primary">
+          <h6> Setul {{ seturi.numar}}</h6>
+        </ion-label>
+      </ion-item>
+      <ion-grid *ngIf="seturi">
+        <ion-row *ngFor="let row of seturi.matrice">
+          <ion-col *ngFor="let cel of row">
+            {{ cel }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br><br>
+    </div>
+  </div>
 
 </ion-content>

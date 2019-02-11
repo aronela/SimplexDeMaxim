@@ -1,4 +1,4 @@
-export const seturiIntrare: {numar: number, selected: boolean, m: number, n: number, matrice: number[][]}[] = [
+export const seturiIntrareMaxim: {numar: number, selected: boolean, m: number, n: number, matrice: number[][]}[] = [
   {
     numar: 1,
     selected: false,
@@ -69,6 +69,17 @@ export const seturiIntrare: {numar: number, selected: boolean, m: number, n: num
       [1, 0, 0, 0, -1, 0, 0, 0],
       [0, 1, 0, 0, 0, -1, 0, 0],
       [-3, -5, 0, 0, 0, 0, 1, 0], // linia indicatorilor
+    ]
+  },
+  {
+    numar: 7,
+    selected: false,
+    m: 2,
+    n: 2,
+    matrice: [
+      [1, 2, 1, 0, 0, 3],
+      [3, 1, 0, 1, 0, 2],
+      [-6, -3, 0, 0, 1, 0],// linia indicatorilor
     ]
   },
 ];

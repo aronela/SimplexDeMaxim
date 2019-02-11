@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {seturiIntrare} from "./simplex/seturiIntrare";
-import {simplexDeMaxim} from "./simplex/simplexDeMaxim";
+import {simplexDeMaxim} from "../../simplex/simplexDeMaxim";
+import {seturiIntrareMaxim} from "./seturiIntrareMaxim";
 
 @Component({
   selector: 'page-home',
@@ -8,7 +8,7 @@ import {simplexDeMaxim} from "./simplex/simplexDeMaxim";
 })
 
 export class HomePage {
-  seturiIntrare = seturiIntrare;
+  seturiIntrare = seturiIntrareMaxim;
   solutii: {solutie: string, numar: number, selected: boolean}[] = [];
   solutiaAleasa: {solutie: string, numar: number, selected: boolean};
 
